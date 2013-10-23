@@ -1,0 +1,63 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: package sumolib.output</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="sumolib.html"><font color="#ffffff">sumolib</font></a>.output</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/delphi/sumo/tools/sumolib/output/__init__.py">/home/delphi/sumo/tools/sumolib/output/__init__.py</a></font></td></tr></table>
+    <p><tt>@file&nbsp;&nbsp;&nbsp;&nbsp;__init__.py<br>
+@author&nbsp;&nbsp;Michael&nbsp;Behrisch<br>
+@author&nbsp;&nbsp;Jakob&nbsp;Erdmann<br>
+@date&nbsp;&nbsp;&nbsp;&nbsp;2011-06-23<br>
+@version&nbsp;$Id:&nbsp;__init__.py&nbsp;14425&nbsp;2013-08-16&nbsp;20:11:47Z&nbsp;behrisch&nbsp;$<br>
+&nbsp;<br>
+Python&nbsp;interface&nbsp;to&nbsp;SUMO&nbsp;especially&nbsp;for&nbsp;parsing&nbsp;output&nbsp;files.<br>
+&nbsp;<br>
+SUMO,&nbsp;Simulation&nbsp;of&nbsp;Urban&nbsp;MObility;&nbsp;see&nbsp;<a href="http://sumo-sim.org/">http://sumo-sim.org/</a><br>
+Copyright&nbsp;(C)&nbsp;2011-2013&nbsp;DLR&nbsp;(<a href="http://www.dlr.de/">http://www.dlr.de/</a>)&nbsp;and&nbsp;contributors<br>
+All&nbsp;rights&nbsp;reserved</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Package Contents</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="sumolib.output.convert.html"><strong>convert</strong>&nbsp;(package)</a><br>
+</td><td width="25%" valign=top><a href="sumolib.output.dump.html">dump</a><br>
+</td><td width="25%" valign=top><a href="sumolib.output.inductionloop.html">inductionloop</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-average"><strong>average</strong></a>(elements, attrname)</dt></dl>
+ <dl><dt><a name="-compound_object"><strong>compound_object</strong></a>(element_name, attrnames)</dt><dd><tt>return&nbsp;a&nbsp;class&nbsp;which&nbsp;delegates&nbsp;attribute&nbsp;acces&nbsp;to&nbsp;a&nbsp;namedtuple&nbsp;instance&nbsp;and<br>
+bracket&nbsp;access&nbsp;to&nbsp;an&nbsp;internal&nbsp;dict.&nbsp;Missing&nbsp;attributes&nbsp;are&nbsp;deletegated&nbsp;to<br>
+the&nbsp;child&nbsp;dict&nbsp;for&nbsp;convenience<br>
+@note:&nbsp;Care&nbsp;must&nbsp;be&nbsp;taken&nbsp;when&nbsp;child&nbsp;nodes&nbsp;and&nbsp;attributes&nbsp;have&nbsp;the&nbsp;same&nbsp;names</tt></dd></dl>
+ <dl><dt><a name="-iskeyword"><strong>iskeyword</strong></a> = __contains__(...)</dt><dd><tt>x.__contains__(y)&nbsp;&lt;==&gt;&nbsp;y&nbsp;in&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-parse"><strong>parse</strong></a>(xmlfile, element_names, element_attrs<font color="#909090">={}</font>, attr_conversions<font color="#909090">={}</font>)</dt><dd><tt>parses&nbsp;the&nbsp;given&nbsp;element_names&nbsp;from&nbsp;xmlfile&nbsp;and&nbsp;yield&nbsp;compound&nbsp;objects&nbsp;for<br>
+their&nbsp;xml&nbsp;subtrees&nbsp;(no&nbsp;extra&nbsp;objects&nbsp;are&nbsp;returned&nbsp;if&nbsp;element_names&nbsp;appear&nbsp;in<br>
+the&nbsp;subtree)&nbsp;The&nbsp;compound&nbsp;objects&nbsp;follow&nbsp;provide&nbsp;all&nbsp;element&nbsp;attributes&nbsp;of<br>
+the&nbsp;first&nbsp;read&nbsp;element&nbsp;as&nbsp;attributes&nbsp;unless&nbsp;attr_names&nbsp;are&nbsp;supplied.&nbsp;In&nbsp;this<br>
+case&nbsp;attr_names&nbsp;maps&nbsp;element&nbsp;names&nbsp;to&nbsp;a&nbsp;list&nbsp;of&nbsp;attributes&nbsp;which&nbsp;are<br>
+supplied.&nbsp;If&nbsp;attr_conversions&nbsp;is&nbsp;not&nbsp;empty&nbsp;it&nbsp;must&nbsp;map&nbsp;attribute&nbsp;names&nbsp;to<br>
+callables&nbsp;which&nbsp;will&nbsp;be&nbsp;called&nbsp;upon&nbsp;the&nbsp;attribute&nbsp;value&nbsp;before&nbsp;storing&nbsp;under<br>
+the&nbsp;attribute&nbsp;name&nbsp;(attribute&nbsp;names&nbsp;may&nbsp;be&nbsp;modified&nbsp;to&nbsp;avoid&nbsp;name&nbsp;clashes<br>
+with&nbsp;python&nbsp;keywords).&nbsp;<br>
+The&nbsp;compound&nbsp;objects&nbsp;gives&nbsp;dictionary&nbsp;style&nbsp;access&nbsp;to&nbsp;list&nbsp;of&nbsp;compound<br>
+objects&nbsp;o&nbsp;for&nbsp;any&nbsp;children&nbsp;with&nbsp;the&nbsp;given&nbsp;element&nbsp;name&nbsp;<br>
+o['child_element_name']&nbsp;=&nbsp;[osub0,&nbsp;osub1,&nbsp;...]<br>
+@Note:&nbsp;all&nbsp;elements&nbsp;with&nbsp;the&nbsp;same&nbsp;name&nbsp;must&nbsp;have&nbsp;the&nbsp;same&nbsp;type&nbsp;regardless&nbsp;of<br>
+the&nbsp;subtree&nbsp;in&nbsp;which&nbsp;they&nbsp;occur</tt></dd></dl>
+ <dl><dt><a name="-parse_fast"><strong>parse_fast</strong></a>(xmlfile, element_name, attrnames, warn<font color="#909090">=False</font>)</dt></dl>
+ <dl><dt><a name="-sum"><strong>sum</strong></a>(elements, attrname)</dt></dl>
+</td></tr></table>
+</body></html>

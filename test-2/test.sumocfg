@@ -1,0 +1,16 @@
+<configure>
+	<input>
+		<net-file value="test.net.xml"/>
+		<route-files value="test.rou.xml"/>
+		<additional-files value="test.rerouter.xml"/>
+	</input>
+	
+	<time>
+		<begin value = "0" />
+		<end value = "800" />
+	</time>
+	
+	<gui_only>
+		<gui-settings-file value="test.settings.xml"/>
+	</gui_only>
+</configure>

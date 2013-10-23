@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Tue Oct 22 17:15:39 2013 by SUMO netgenerate Version 0.18.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/netgenerateConfiguration.xsd">
+
+    <grid_network>
+        <grid value="true"/>
+        <grid.number value="4"/>
+        <grid.length value="100"/>
+    </grid_network>
+
+    <output>
+        <output-file value="test.net.xml"/>
+        <plain-output-prefix value="test"/>
+    </output>
+
+</configuration>
+-->
+
+<nodes version="0.13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/nodes_file.xsd">
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,300.00,300.00" origBoundary="0.00,0.00,300.00,300.00" projParameter="!"/>
+
+    <node id="0/0" x="0.00" y="0.00" type="priority"/>
+    <node id="0/1" x="0.00" y="100.00" type="priority"/>
+    <node id="0/2" x="0.00" y="200.00" type="priority"/>
+    <node id="0/3" x="0.00" y="300.00" type="priority"/>
+    <node id="1/0" x="100.00" y="0.00" type="priority"/>
+    <node id="1/1" x="100.00" y="100.00" type="priority"/>
+    <node id="1/2" x="100.00" y="200.00" type="priority"/>
+    <node id="1/3" x="100.00" y="300.00" type="priority"/>
+    <node id="2/0" x="200.00" y="0.00" type="priority"/>
+    <node id="2/1" x="200.00" y="100.00" type="priority"/>
+    <node id="2/2" x="200.00" y="200.00" type="priority"/>
+    <node id="2/3" x="200.00" y="300.00" type="priority"/>
+    <node id="3/0" x="300.00" y="0.00" type="priority"/>
+    <node id="3/1" x="300.00" y="100.00" type="priority"/>
+    <node id="3/2" x="300.00" y="200.00" type="priority"/>
+    <node id="3/3" x="300.00" y="300.00" type="priority"/>
+</nodes>

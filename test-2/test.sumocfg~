@@ -1,0 +1,15 @@
+<configure>
+	<input>
+		<net-file value="test.net.xml"/>
+		<route-files value="test.rou.xml"/>
+	</input>
+	
+	<time>
+		<begin value = "0" />
+		<end value = "300" />
+	</time>
+	
+	<gui_only>
+		<gui-settings-file value="test.settings.xml"/>
+	</gui_only>
+</configure>
