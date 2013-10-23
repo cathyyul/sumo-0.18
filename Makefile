@@ -102,15 +102,15 @@ DIST_ARCHIVES = $(distdir).tar.gz $(distdir).zip
 GZIP_ENV = --best
 distuninstallcheck_listfiles = find . -type f -print
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/yutingyu/sumo-0.18.0/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/yutingyu/sumo-0.18/missing --run aclocal-1.11
 ALLOCA = 
-AMTAR = ${SHELL} /home/yutingyu/sumo-0.18.0/missing --run tar
-AM_CPPFLAGS = -I/home/yutingyu/sumo-0.18.0/./src  -I/usr/local/include/fox-1.6 -I/usr/include/fox-1.6  -I/usr/local/include/gdal -I/usr/include/gdal  -I/usr/local/include -I/usr/include 
+AMTAR = ${SHELL} /home/yutingyu/sumo-0.18/missing --run tar
+AM_CPPFLAGS = -I/home/yutingyu/sumo-0.18/./src  -I/usr/local/include/fox-1.6 -I/usr/include/fox-1.6  -I/usr/local/include/gdal -I/usr/include/gdal  -I/usr/local/include -I/usr/include 
 AM_CXXFLAGS = 
 AR = ar
-AUTOCONF = ${SHELL} /home/yutingyu/sumo-0.18.0/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/yutingyu/sumo-0.18.0/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/yutingyu/sumo-0.18.0/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/yutingyu/sumo-0.18/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/yutingyu/sumo-0.18/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/yutingyu/sumo-0.18/missing --run automake-1.11
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -124,7 +124,6 @@ CXXFLAGS = -O2 -DNDEBUG
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-DLLTOOL = false
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
@@ -154,8 +153,7 @@ LIB_XERCES = xerces-c
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/yutingyu/sumo-0.18.0/missing --run makeinfo
-MANIFEST_TOOL = :
+MAKEINFO = ${SHELL} /home/yutingyu/sumo-0.18/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
 NMEDIT = 
@@ -169,12 +167,9 @@ PACKAGE_BUGREPORT =
 PACKAGE_NAME = sumo
 PACKAGE_STRING = sumo 0.18.0
 PACKAGE_TARNAME = sumo
-PACKAGE_URL = 
 PACKAGE_VERSION = 0.18.0
 PATH_SEPARATOR = :
 PKG_CONFIG = /usr/bin/pkg-config
-PKG_CONFIG_LIBDIR = 
-PKG_CONFIG_PATH = 
 PROJ_LDFLAGS = 
 PYTHON_LIBS = 
 RANLIB = ranlib
@@ -186,11 +181,10 @@ VERSION = 0.18.0
 XERCES_CFLAGS =  
 XERCES_LDFLAGS = 
 XERCES_LIBS = -lxerces-c  
-abs_builddir = /home/yutingyu/sumo-0.18.0
-abs_srcdir = /home/yutingyu/sumo-0.18.0
-abs_top_builddir = /home/yutingyu/sumo-0.18.0
-abs_top_srcdir = /home/yutingyu/sumo-0.18.0
-ac_ct_AR = ar
+abs_builddir = /home/yutingyu/sumo-0.18
+abs_srcdir = /home/yutingyu/sumo-0.18
+abs_top_builddir = /home/yutingyu/sumo-0.18
+abs_top_srcdir = /home/yutingyu/sumo-0.18
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 ac_ct_DUMPBIN = 
@@ -219,11 +213,12 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/yutingyu/sumo-0.18.0/install-sh
+install_sh = ${SHELL} /home/yutingyu/sumo-0.18/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
+lt_ECHO = echo
 mandir = ${datarootdir}/man
 mkdir_p = /bin/mkdir -p
 oldincludedir = /usr/include
@@ -551,7 +546,7 @@ distcheck: dist
 	*.zip*) \
 	  unzip $(distdir).zip ;;\
 	esac
-	chmod -R a-w $(distdir); chmod a+w $(distdir)
+	chmod -R a-w $(distdir); chmod u+w $(distdir)
 	mkdir $(distdir)/_build
 	mkdir $(distdir)/_inst
 	chmod a-w $(distdir)

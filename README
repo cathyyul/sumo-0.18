@@ -1,3 +1,11 @@
+Compilation: 
+
+autoreconf -fvi
+./configure
+make
+
+
+
 
                            SUMO - Simulation of Urban MObility 
 
